@@ -11,5 +11,6 @@ class Config(object):
     SERVICENOW_USERNAME=os.environ.get('SERVICENOW_USERNAME') or 'TEST_USER'
     SERVICENOW_ASSIGNMENT_GROUP=os.environ.get('SERVICENOW_ASSIGNMENT_GROUP') or 'TEST GROUP'
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'app.db')
+    SERVICENOW_CALLER_ID = os.environ.get('SERVICENOW_CALLER_ID') or 'TEST_USER'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
      
