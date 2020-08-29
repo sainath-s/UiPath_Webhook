@@ -47,9 +47,9 @@ Prerequisite:  ServiceNow Developer Instance with REST API User for creating Inc
 
     ![Index Page](/images/bot_monitor_index.JPG)
 
-2.  Exposing the Flask to Internet
+2.  Expose FLASK web server running on your local machine to the internet
 
-      Since this is for learning i have used [ngork](https://ngrok.com/) to acheive tunneling. Download the exe to your root directory or one step above the root directory
+      I have used [ngork](https://ngrok.com/) to acheive this. Download the exe to your root directory or one step above the root directory
 
       ```bash
         cd <path_to_ngork.exe>
@@ -64,7 +64,11 @@ Prerequisite:  ServiceNow Developer Instance with REST API User for creating Inc
       [About Webhook](https://docs.uipath.com/orchestrator/docs/about-webhooks)
       [Creation a new Webhook in UiPath] (https://docs.uipath.com/orchestrator/docs/managing-webhooks)
 
-      * In the URL section proivde the URL which you got in ngork Terminal Ex:http://<some_random_number>.ngrok.io/webhook and Subscribe only to Jobs.Faulted event. 
+      * In the URL section proivde the URL which you got in ngork Terminal follwed by keywork /webhook. Ex:http://<some_random_number>.ngrok.io/webhook and Subscribe only to             Jobs.Faulted event. 
       * Provide a SECRET in this section if want to authicate the Webhooks request(recommended) before taking any action.Same SECRET should be provided in the .env file for             "SECRET_KEY"
+   
+  ## Design
+  
+     ![Design](/images/bot_monitor_index.JPG)
   
   ## Demo:
