@@ -1,0 +1,20 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - Bot Monitor</title>
+      {% else %}
+      <title>Welcome to Bot Monitor</title>
+      {% endif %}
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+          <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap text-white">
+              <h3>Bot Fault Summary</h1>
+            </li>
+          </ul>
+        </nav>
+        {% block content %}{% endblock %}
+    </body>
+</html>

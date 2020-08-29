@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <div class="container-fluid">
+        <!-- <div class="bg-dark text-white text-center mt-2 pt-2 pb-2">Bot Fault Summary</div> -->
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Process Name</th>
+                            <th scope="col">Start Time</th>
+                            <th scope="col">End Time</th>
+                            <th scope="col">Incident Number</th>
+                            <th scope="col">Incident Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for items in botevents %}
+                        <tr>
+                            <th scope="row">{{loop.index0 + 1}}</td>
+                            <td>{{items.processname}}</td>
+                            <td>{{items.starttime}}</td>
+                            <td>{{items.endtime}}</td>
+                            <td>{{items.incidentnumber}}</td>
+                            <td>{{items.incidentstatus}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>    
+     
+{% endblock %}
