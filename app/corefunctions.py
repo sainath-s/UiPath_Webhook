@@ -36,11 +36,12 @@ def create_incident_Ticket(data):
         username = flask_app.config['SERVICENOW_USERNAME']
         password = flask_app.config['SERVICENOW_SECRET']
         assignment_group =flask_app.config['SERVICENOW_ASSIGNMENT_GROUP']
+        caller_id = flask_app.config['SERVICENOW_CALLER_ID']
 
         #setting Headers and Payload
         sn_headers = {'Content-Type':"application/json",'Accept':"application/json"}
-        payload = {"short_description": process_name + " - bot Failed","Description": error_message,
-                    "assignment_group":assignment_group}
+        payload = {"short_description": process_name + " - bot Failed","description": error_message,
+                    "assignment_group":assignment_group,"caller_id":caller_id}
        
         #Send POST request to Create Ticket
         response = requests.post(url,auth=(username,password),headers=sn_headers,json=payload)
