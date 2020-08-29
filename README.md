@@ -49,7 +49,7 @@ Prerequisite:  ServiceNow Developer Instance with REST API User for creating Inc
 
 2.  Expose FLASK web server running on your local machine to the internet
 
-      I have used [ngork](https://ngrok.com/) to acheive this. Download the exe to your root directory or one step above the root directory
+      I have used [ngrok](https://ngrok.com/) to acheive this. Download the exe to your root directory or one step above the root directory
 
       ```bash
         cd <path_to_ngork.exe>
