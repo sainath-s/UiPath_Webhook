@@ -1,5 +1,5 @@
 
-# Uipath JobFailure reporting in ServiceNow using UiPath_Webhook
+# Uipath JobFailure reporting in ServiceNow using Webhook
 
 This Project focuses on setting up a Centralized server (based on flask framework) to listen for Bot Failure events in UiPath Orchestrator and create an Incident in ServiceNow.This project can be extended to listen to various events and act accorrdingly.
 
@@ -69,6 +69,6 @@ Prerequisite:  ServiceNow Developer Instance with REST API User for creating Inc
    
   ## Design
   
-     ![Design](/images/bot_monitor_index.JPG)
+   ![Design](/images/uipath_webhook_integration.png)
   
   ## Demo:
